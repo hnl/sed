@@ -57,6 +57,9 @@ fwriting (FILE *fp)
   if (fp->state == 0 /* CLOSED */ || fp->state == 3 /* RD */)
     return 0;
   return (fp->state == 4 /* WR */ && (fp->bufl == 0 || fp->wp < fp->rp));
+#elif defined __amigaos4__ && defined __CLIB2__ /* AmigaOS4 CLIB2 */
+  // unable to determine if the last operation was a write operation
+  return ((fp->flags & __FILE_READABLE) != __FILE_READABLE);
 #else
 # error "Please port gnulib fwriting.c to your platform!"
 #endif

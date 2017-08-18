@@ -38,6 +38,10 @@
 # define PACKAGE PACKAGE_TARNAME
 #endif
 
+#ifdef __amigaos4__
+const char *amiversion __attribute__((used)) = "$VER: sed 54.3 (18.08.17)";
+#endif
+
 enum { COPYRIGHT_YEAR = 2017 };
 
 /* The three functions below display the --version information the

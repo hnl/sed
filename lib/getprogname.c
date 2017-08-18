@@ -51,6 +51,12 @@
 # include <sys/procfs.h>
 #endif
 
+#if defined __amigaos4__ && defined __CLIB2__ /* AmigaOS4 CLIB2 */
+# include <limits.h>
+# include <dos/dos.h>
+# include <proto/dos.h>
+#endif
+
 #include "dirname.h"
 
 #ifndef HAVE_GETPROGNAME             /* not Mac OS X, FreeBSD, NetBSD, OpenBSD >= 5.4, Cygwin */
@@ -177,6 +183,12 @@ getprogname (void)
         }
     }
   return NULL;
+#elif defined __amigaos4__ && defined __CLIB2__ /* AmigaOS4 CLIB2 */
+  char * name;
+
+  if (IDOS->GetCliProgramName(name, PATH_MAX))
+	  return IDOS->FilePart(name);
+  return "unknown";
 # else
 #  error "getprogname module not ported to this OS"
 # endif
