@@ -1,0 +1,11 @@
+This is the GNU implementation of sed, the Unix stream editor.
+
+This is the AmigaOS4 port of sed.
+
+The sources can be found on https://github.com/hnl/sed
+
+Please read the original README file that is in thes directory.
+
+Best regards,
+Henning Nielsen Lund
+hnl_dk@amigaos.dk
