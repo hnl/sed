@@ -9,3 +9,17 @@ Please read the original README file that is in thes directory.
 Best regards,
 Henning Nielsen Lund
 hnl_dk@amigaos.dk
+
+HISTORY
+-------
+54.3    - Updated to the GNUlib changes, that I have made for coreutils.
+        - Setup a git repository for this port.
+54.2    - Minor fixes.
+54.1    - Initial port of GNU sed 4.4
+        - Added Autoinstall script.
+        - Added Amiga version data.
+        - Large file support.
+
+To build (using clib2), you at the moment need
+http://www.os4depot.net/index.php?function=showfile&file=development/library/mis
+c/libwide.lha
