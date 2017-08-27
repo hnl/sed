@@ -38,7 +38,7 @@
 int
 qset_acl (char const *name, int desc, mode_t mode)
 {
-#if defined __amigaos4__ /* AmigaOS4 CLIB2 */
+#if defined __amigaos__ /* AmigaOS */
   mode_t newmode = mode & (S_ISUID | S_ISGID | S_ISVTX);
 
   if (desc != -1)

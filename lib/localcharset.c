@@ -386,7 +386,7 @@ get_charset_aliases (void)
    If the canonical name cannot be determined, the result is a non-canonical
    name.  */
 
-#if !(defined __amigaos4__ && defined __CLIB2__) /* AmigaOS4 CLIB2 */
+#if !(defined __amigaos__ && defined __CLIB2__) /* AmigaOS using CLIB2 */
 #ifdef STATIC
 STATIC
 #endif

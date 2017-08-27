@@ -12,6 +12,7 @@ hnl_dk@amigaos.dk
 
 HISTORY
 -------
+54.4    - Updated to the GNUlib changes, that I have made for coreutils.
 54.3    - Updated to the GNUlib changes, that I have made for coreutils.
         - Setup a git repository for this port.
 54.2    - Minor fixes.

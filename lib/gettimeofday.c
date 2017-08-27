@@ -76,7 +76,7 @@ rpl_gmtime (time_t const *timep)
 
 #endif /* GETTIMEOFDAY_CLOBBERS_LOCALTIME || TZSET_CLOBBERS_LOCALTIME */
 
-#if !(defined __amigaos4__ && defined __CLIB2__) /* AmigaOS4 CLIB2 */
+#if !(defined __amigaos__ && defined __CLIB2__) /* AmigaOS using CLIB2 */
 #if TZSET_CLOBBERS_LOCALTIME
 
 # undef tzset

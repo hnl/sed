@@ -39,7 +39,7 @@ int
 qcopy_acl (const char *src_name, int source_desc, const char *dst_name,
            int dest_desc, mode_t mode)
 {
-#if defined __amigaos4__ /* AmigaOS4 */
+#if defined __amigaos__ /* AmigaOS */
   struct stat st;
   mode_t newmode = mode & (S_ISUID | S_ISGID | S_ISVTX);
 

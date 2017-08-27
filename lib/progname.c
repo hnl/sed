@@ -27,7 +27,8 @@
 #include <stdlib.h>
 #include <string.h>
 
-#if defined __amigaos4__ && defined __CLIB2__ /* AmigaOS4 CLIB2 */
+#if defined __amigaos__ /* AmigaOS */
+# define __USE_INLINE__ 1
 # include <dos/dos.h>
 # include <proto/dos.h>
 #endif
@@ -60,8 +61,8 @@ set_program_name (const char *argv0)
       abort ();
     }
 
-#if defined __amigaos4__ && defined __CLIB2__ /* AmigaOS4 CLIB2 */
-  program_name = IDOS->FilePart(argv0);
+#if defined __amigaos__ /* AmigaOS */
+  program_name = FilePart(argv0);
 #else
 
   slash = strrchr (argv0, '/');
